@@ -7,7 +7,12 @@ y = float(7)
 z = str(9)
 _rndText = "Hello World!"
 
+"""
 print(x)
 print(y)
 print(z)
 print(_rndText) #displaying "Hello World!"
+"""
+def _MyFunction():  
+    Print(_rndText + "Python is fun")
+
