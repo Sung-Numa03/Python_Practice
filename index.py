@@ -55,17 +55,21 @@ else:
 
 print("===========While=============")
 
-i = 1
-n = 5
-secret_word = 6
+key = 6
 counter = 1
 
 while True:
-    word = input("Enter secret number: ")
-    counter = counter + 1
-    if word == secret_word:
-        print(" You're correct😊")
-        break
-    if word != secret_word and counter > 7:
-        print("you've used all your chances😂")
-        break
+    word = input("Enter secret number: ").lower()
+    counter += 1
+    if word.isdigit(): # checks if the input is a valid integer
+        guess = int(word)
+        if guess == key:
+            print("Congratulations! You guessed the secret number.")
+            break
+        elif  counter > 7:
+            print("You've used all your chances. Better luck next time!")
+            break
+        else:
+            print("Incorrect guess. Try again.")
+    else:
+        print("Please enter a valid integer.")
